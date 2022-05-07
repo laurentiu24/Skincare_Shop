@@ -9,8 +9,5 @@
         <module name="simple-registration-example" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="simple-registration-example" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
