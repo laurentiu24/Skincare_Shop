@@ -5,12 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.loose.fis.sre.exceptions.NoUpperCaseException;
 import org.loose.fis.sre.exceptions.UncompletedFieldsException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistException;
-import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.services.UserService;
 
 public class RegistrationController {
