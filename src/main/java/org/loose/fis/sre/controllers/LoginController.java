@@ -49,12 +49,7 @@ public class LoginController {
                 scene.setTitle("Admin");
                 scene.setScene(new Scene(root,720,490));
                 scene.setResizable(true);
-                //scene.setMinHeight(1080);
-                //scene.setMinWidth(1920);
-                //scene.setMaxHeight(1080);
-                //scene.setMaxWidth(1920);
-                //scene.setTitle("Client");
-                //scene.setFullScreen(true);
+
 
 
             }
