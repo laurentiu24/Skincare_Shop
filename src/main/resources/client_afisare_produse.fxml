@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="490.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.client_afisare_produse">
+    <Button onAction="#handleButonInapoi" mnemonicParsing="false" text="Inapoi">
+        <VBox.margin>
+            <Insets top="20.0" left="20.0"/>
+        </VBox.margin>
+    </Button>
+
+    <BorderPane prefHeight="490.0" prefWidth="725.0">
+        <center>
+            <TableView fx:id="tabelproduse" prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="BOTTOM_LEFT">
+                <columns>
+                    <TableColumn fx:id="nume" prefWidth="208.3" text="Nume" />
+                    <TableColumn fx:id="pret" prefWidth="208.3" text="Pret" />
+                    <TableColumn fx:id="tippiele" prefWidth="208.3" text="Tip piele"/>
+                </columns>
+            </TableView>
+        </center>
+        <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="20.0" />
+        </padding>
+        <top>
+            <Label alignment="CENTER" prefHeight="5.0" prefWidth="260.0" text="Produse" BorderPane.alignment="CENTER">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+        </top>
+    </BorderPane>
+</VBox>
