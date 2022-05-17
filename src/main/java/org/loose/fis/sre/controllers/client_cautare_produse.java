@@ -13,6 +13,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.Produs;
+import org.loose.fis.sre.services.CartServices;
 import org.loose.fis.sre.services.ProduseService;
 
 import java.io.IOException;
@@ -55,6 +56,20 @@ public class client_cautare_produse {
             String piele=cc.getSelectionModel().getSelectedItem().toString();
             ObservableList<Produs> produse1 = FXCollections.observableArrayList(ProduseService.getProduseSelectate(piele));
             tabelproduse.setItems(produse1);
+        }
+    }
+    public void handleButonInapoi() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
+        Stage stage = (Stage) tabelproduse.getScene().getWindow();
+        stage.setScene(new Scene(root));
+    }
+
+    public void handleAdaugareCos() {
+        ObservableList<Produs> typesSelected;
+        typesSelected = tabelproduse.getSelectionModel().getSelectedItems();
+        for(Produs pr: typesSelected)
+        {
+            CartServices.addCos(pr);
         }
     }
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="472.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.client_cautare_produse">
+    <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#cbOnAction" text="Search skins" />
+    <ChoiceBox fx:id="cc" prefWidth="150.0" />
+    <Button mnemonicParsing="false" onAction="#seeOnAction" text="See products" />
+    <Button layoutX="28.0" layoutY="89.0" onAction="#handleAdaugareCos" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Add to cart" />
+
+    <BorderPane prefHeight="370.0" prefWidth="725.0">
+        <center>
+            <TableView fx:id="tabelproduse" prefHeight="348.0" prefWidth="550.0" BorderPane.alignment="BOTTOM_LEFT">
+                <columns>
+                    <TableColumn fx:id="nume" prefWidth="208.3" text="Nume" />
+                    <TableColumn fx:id="pret" prefWidth="208.3" text="Pret" />
+                    <TableColumn fx:id="tippiele" prefWidth="208.3" text="Tip piele" />
+                </columns>
+            </TableView>
+        </center>
+        <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="20.0" />
+        </padding>
+        <top>
+            <Label alignment="CENTER" prefHeight="0.0" prefWidth="260.0" text="Produse" BorderPane.alignment="CENTER">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+        </top>
+        <bottom>
+            <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButonInapoi" prefHeight="21.0" prefWidth="50.0" text="Inapoi" BorderPane.alignment="CENTER_RIGHT" />
+        </bottom>
+
+
+    </BorderPane>
+</VBox>
+
