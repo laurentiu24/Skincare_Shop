@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane hgap="2" prefHeight="400.0" prefWidth="572.0" style="-fx-background-color:  BISQUE;" vgap="3" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.client_main_page">
+    <TilePane alignment="CENTER_RIGHT" prefHeight="101.0" prefWidth="572.0" style="-fx-background-color: MOCCASIN; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" GridPane.rowIndex="0">
+        <Text id="title-text" text="CLIENT" textAlignment="LEFT" wrappingWidth="318.00002843141556"><font>
+            <Font name="Bookman Old Style Bold Italic" size="20.0" />
+        </font></Text>
+        <effect>
+            <InnerShadow>
+                <color>
+                    <Color red="1.0" green="0.9870370626449585" blue="0.9870370626449585" />
+                </color>
+            </InnerShadow>
+        </effect>
+    </TilePane>
+    <HBox alignment="CENTER" prefHeight="47.0" prefWidth="572.0" spacing="50" GridPane.rowIndex="3" />
+
+
+
+    <HBox alignment="CENTER" prefHeight="56.0" prefWidth="600.0" spacing="50" GridPane.rowIndex="8" />
+
+    <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="581.0" spacing="50" GridPane.rowIndex="59" />
+    <Button fx:id="butonVizualizareListaServiciiSiPreturi" onAction="#handleProduse" prefHeight="31.0" prefWidth="358.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare lista produse si preturi" GridPane.rowIndex="6">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <Button fx:id="butonVizualizareStatus" alignment="CENTER" onAction="#handleVizualizareStatus" prefHeight="8.0" prefWidth="328.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare status comanda" textAlignment="CENTER" GridPane.rowIndex="7">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <Button fx:id="buttonCreate" alignment="CENTER" onAction="#handleRegisterAction" prefHeight="40.0" prefWidth="129.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Creare cont nou" GridPane.rowIndex="1">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <Button fx:id="butonDeconectare" onAction="#handleDeconectare" prefHeight="30.0" prefWidth="166.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Deconectare" GridPane.rowIndex="61">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <Button fx:id="cautare" mnemonicParsing="false" onAction="#handleCautare" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Cautare" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#handleVizualizareCos" style="-fx-background-color: LIGHT_GREY; -fx-border-style: inset; -fx-border-style: outset; -fx-border-color: BLACK;" text="Vizualizare cos" GridPane.rowIndex="16">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+    </Button>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="572.0" minWidth="541.0" prefWidth="572.0" />
+        <ColumnConstraints maxWidth="31.0" minWidth="0.0" prefWidth="0.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="153.60000000000002" minHeight="70.60000000000002" prefHeight="91.2" />
+        <RowConstraints maxHeight="153.60000000000002" minHeight="62.20000000000002" prefHeight="62.20000000000002" />
+        <RowConstraints maxHeight="153.60000000000002" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="12.199999999999989" />
+        <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="12.199999999999989" />
+        <RowConstraints maxHeight="54.39999999999999" minHeight="0.0" prefHeight="15.0" />
+        <RowConstraints maxHeight="49.20000000000002" minHeight="31.400000000000006" prefHeight="32.0" />
+        <RowConstraints maxHeight="49.20000000000002" minHeight="31.400000000000006" prefHeight="32.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="19.80000000000001" minHeight="0.0" prefHeight="19.80000000000001" />
+        <RowConstraints maxHeight="31.600000000000023" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="54.39999999999998" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="54.39999999999998" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="54.39999999999998" minHeight="12.399999999999977" prefHeight="12.800000000000011" />
+    </rowConstraints>
+
+
+
+</GridPane>
+
