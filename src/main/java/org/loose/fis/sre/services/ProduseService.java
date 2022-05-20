@@ -9,9 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import static org.loose.fis.sre.services.FileSystemService.getPathProdusToFile;
+
 public class ProduseService {
 
     public static ObjectRepository<Produs> produsRepository;
+
+    public static void initProdusDatabase() {
+        Nitrite database = Nitrite.builder()
+                .filePath(getPathProdusToFile("Produse.db").toFile())
+                .openOrCreate("admin", "admin1");
+
+        produsRepository = database.getRepository(Produs.class);
+    }
 
 
     public static void addProduse(String nume, String pret, String tippiele)
