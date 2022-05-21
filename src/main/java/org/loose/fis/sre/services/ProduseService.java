@@ -15,12 +15,18 @@ public class ProduseService {
 
     public static ObjectRepository<Produs> produsRepository;
 
+    public static Nitrite db;
     public static void initProdusDatabase() {
-        Nitrite database = Nitrite.builder()
+        db = Nitrite.builder()
                 .filePath(getPathProdusToFile("Produse.db").toFile())
                 .openOrCreate("admin", "admin1");
 
-        produsRepository = database.getRepository(Produs.class);
+        produsRepository = db.getRepository(Produs.class);
+    }
+
+
+    public static void closeProdusDatabase(){
+        db.close();
     }
 
 

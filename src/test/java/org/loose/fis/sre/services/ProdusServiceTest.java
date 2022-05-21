@@ -10,6 +10,7 @@ import static org.junit.Assert.assertTrue;
 public class ProdusServiceTest {
     @Test
     public void testCopyDefaultUserNotExists() throws Exception{
+        ProduseService.closeProdusDatabase();
         ProduseService.initProdusDatabase();
         assertTrue(Files.exists(FileSystemService.getPathToFile()));
     }
@@ -21,4 +22,3 @@ public class ProdusServiceTest {
         assertEquals(i+1,UserService.getAllUsers().size());
     }
 }
-
