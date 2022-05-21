@@ -22,12 +22,16 @@ public class UserService {
     public static ObjectRepository<User> userRepository;
 
 
+    public static Nitrite database;
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+        database = Nitrite.builder()
                 .filePath(getPathToFile("Admin.db").toFile())
                 .openOrCreate("admin", "admin1");
 
         userRepository = database.getRepository(User.class);
+    }
+    public static void closeDatabase() {
+        database.close();
     }
 
     public static void addUser(String username,String password,String name,String email,String address,String phone) throws UsernameAlreadyExistException, NoUpperCaseException, UncompletedFieldsException, UsernameAlreadyExistException {
@@ -39,7 +43,7 @@ public class UserService {
         checkUserDoesNotAlreadyExist(username);
         UpperCaseExists(password);
         User user=new User(username, encodePassword(username, password), name, email, address, phone);
-        //user.setisAdmin();
+        user.setisAdmin();
         userRepository.insert(user);
 
     }
@@ -52,7 +56,7 @@ public class UserService {
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistException {
         Cursor<User> cursor = userRepository.find();
         for (User user : cursor) {
-//            if (Objects.equals(username, user.getUsername()))
+//           if (Objects.equals(username, user.getUsername()))
             if (username.equals(user.getUsername()))
             {   throw new UsernameAlreadyExistException(username);
 
@@ -139,7 +143,7 @@ public class UserService {
         checkUserDoesNotAlreadyExist(username);
         UpperCaseExists(password);
         User u=new User(username,encodePassword(username,password),name,email,address,phone);
-        u.setisAdmin();
+        //u.setisAdmin();
         userRepository.insert(u);
     }
 
